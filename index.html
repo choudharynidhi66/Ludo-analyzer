@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ludo Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <h1>🎲 Ludo Analyzer</h1>
+
+    <div class="card">
+
+        <h2>1. Upload Board Screenshot</h2>
+
+        <input
+            type="file"
+            id="imageInput"
+            accept="image/*"
+        >
+
+        <img
+            id="preview"
+            class="preview"
+        >
+
+    </div>
+
+    <div class="card">
+
+        <h2>2. Your Colour</h2>
+
+        <select id="playerColor">
+
+            <option value="red">🔴 Red</option>
+
+            <option value="green">🟢 Green</option>
+
+            <option value="yellow">🟡 Yellow</option>
+
+            <option value="blue">🔵 Blue</option>
+
+        </select>
+
+    </div>
+
+    <div class="card">
+
+        <h2>3. Dice</h2>
+
+        <input
+            type="number"
+            id="dice"
+            min="1"
+            max="6"
+            placeholder="1 - 6"
+        >
+
+    </div>
+
+    <button
+        id="analyzeButton"
+        onclick="analyze()"
+    >
+        ANALYZE MOVE
+    </button>
+
+    <div class="card result">
+
+        <h2>Recommendation</h2>
+
+        <div id="result">
+            Upload a screenshot and enter your dice.
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
